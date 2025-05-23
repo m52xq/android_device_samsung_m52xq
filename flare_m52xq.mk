@@ -25,7 +25,7 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/flare/config/common_full_phone.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -36,6 +36,14 @@ TARGET_SCREEN_WIDTH := 1080
 
 # NFC
 TARGET_HAVE_SEC_NFC := true
+
+# Flare
+
+FLARE_BUILD_TYPE := OFFICIAL
+FLARE_MAINTAINER := tilt-rgb
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_m52xq
