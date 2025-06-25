@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_m52xq.mk
+    $(LOCAL_DIR)/voltage_m52xq.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_m52xq-userdebug \
-    lineage_m52xq-user \
-    lineage_m52xq-eng
+    voltage_m52xq-userdebug \
+    voltage_m52xq-user \
+    voltage_m52xq-eng
