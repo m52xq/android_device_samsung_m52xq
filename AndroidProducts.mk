@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/voltage_m52xq.mk
+    $(LOCAL_DIR)/yaap_m52xq.mk
 
 COMMON_LUNCH_CHOICES := \
-    voltage_m52xq-userdebug \
-    voltage_m52xq-user \
-    voltage_m52xq-eng
+    yaap_m52xq-userdebug \
+    yaap_m52xq-user \
+    yaap_m52xq-eng

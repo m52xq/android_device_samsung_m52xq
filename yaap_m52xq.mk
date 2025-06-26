@@ -25,7 +25,9 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+
+TARGET_BUILD_GAPPS := true
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -38,7 +40,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_HAVE_SEC_NFC := true
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := voltage_m52xq
+PRODUCT_NAME := yaap_m52xq
 PRODUCT_DEVICE := m52xq
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M526B
