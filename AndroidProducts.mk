@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_m52xq.mk
+    $(LOCAL_DIR)/xperience_m52xq.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_m52xq-userdebug \
-    lineage_m52xq-user \
-    lineage_m52xq-eng
+    xperience_m52xq-userdebug \
+    xperience_m52xq-user \
+    xperience_m52xq-eng
