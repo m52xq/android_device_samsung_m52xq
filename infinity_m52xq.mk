@@ -18,14 +18,19 @@
 $(call inherit-product, device/samsung/m52xq/device.mk)
 
 # Inherit from the 64 bit configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
 # Inherit from the common Open Source product configuration
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
+# InfinityX
+INFINITY_MAINTAINER := "tilt-rgb"
+INFINITY_BUILD_TYPE := OFFICIAL
+WITH_GAPPS := true
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -38,7 +43,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_HAVE_SEC_NFC := true
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_m52xq
+PRODUCT_NAME := infinity_m52xq
 PRODUCT_DEVICE := m52xq
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M526B
@@ -49,5 +54,5 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Vendor fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint="google/husky_beta/husky:16/BP41.250822.010/14082742:user/release-keys" \
+    BuildFingerprint="google/komodo_beta/komodo:CANARY/ZP11.251212.007/14649019:user/release-keys" \
     BuildDesc="m52xqins-user 11 RP1A.200720.012 M526BXXS7CYE1 release-keys"
